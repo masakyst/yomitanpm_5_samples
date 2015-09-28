@@ -1,6 +1,6 @@
 package Flaskr::View::MicroTemplate::DataSection {
     use Moose; extends 'Catalyst::View::MicroTemplate::DataSection';
-    has '+namespace' => (default => 'main');
+    sub _build_section { 'main' }
 };
 
 package Flaskr::Controller::Root {
